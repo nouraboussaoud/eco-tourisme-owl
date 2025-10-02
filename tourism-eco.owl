@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/tourisme-eco#"
+     xml:base="http://www.example.org/tourisme-eco"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    
+    <owl:Ontology rdf:about="http://www.example.org/tourisme-eco"/>
+    
+    <!-- ========== 1. TOURISTE et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Touriste">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TouristeIndividuel">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TouristeEnGroupe">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TouristeProfessionnel">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+    </owl:Class>
+    
+    <!-- ========== 2. PROFIL TOURISTE et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ProfilTouriste">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#BudgetLimite">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ProfilTouriste"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#BudgetMoyen">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ProfilTouriste"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#BudgetEleve">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ProfilTouriste"/>
+    </owl:Class>
+    
+    <!-- ========== 3. DESTINATION et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Destination">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Plage">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Montagne">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Ville">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#PatrimoineCulturel">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:Class>
+    
+    <!-- ========== 4. HEBERGEMENT et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Hebergement">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#HotelEcologique">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#GiteRural">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Auberge">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#CampingEcoResponsable">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:Class>
+    
+    <!-- ========== 5. TRANSPORT et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Transport">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TransportTerrestre">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportTerrestre"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#VoitureElectrique">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportTerrestre"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Velo">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportTerrestre"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TransportAerien">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Avion">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportAerien"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Helicoptere">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportAerien"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TransportMaritime">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#BateauEco">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportMaritime"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Ferry">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#TransportMaritime"/>
+    </owl:Class>
+    
+    <!-- ========== 6. ACTIVITE TOURISTIQUE et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ActiviteTouristique">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ActiviteCulturelle">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Musee">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteCulturelle"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#VisiteHistorique">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteCulturelle"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ActiviteSportive">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Randonnee">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteSportive"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Plongee">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteSportive"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ActiviteDetente">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Spa">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteDetente"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Meditation">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteDetente"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ActiviteEducative">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#AtelierLocal">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteEducative"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#TourismeDurable">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ActiviteEducative"/>
+    </owl:Class>
+    
+    <!-- ========== 7. IMPACT ENVIRONNEMENTAL et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ImpactEnvironnemental">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ImpactFaible">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ImpactEnvironnemental"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ImpactMoyen">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ImpactEnvironnemental"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ImpactEleve">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#ImpactEnvironnemental"/>
+    </owl:Class>
+    
+    <!-- ========== 8. CERTIFICATION ECO et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#CertificationEco">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#LabelNational">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#CertificationEco"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#LabelInternational">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#CertificationEco"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#GreenGlobe">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#LabelInternational"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#EcoTourism">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#LabelInternational"/>
+    </owl:Class>
+    
+    <!-- ========== 9. DURABILITE et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Durabilite">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#DurabiliteSociale">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Durabilite"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#DurabiliteEconomique">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Durabilite"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#DurabiliteEnvironnementale">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Durabilite"/>
+    </owl:Class>
+    
+    <!-- ========== 10. RECOMMANDATION et sous-classes ========== -->
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#Recommandation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#DestinationRecommandee">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Recommandation"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#ActiviteRecommandee">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Recommandation"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://www.example.org/tourisme-eco#HebergementRecommande">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/tourisme-eco#Recommandation"/>
+    </owl:Class>
+    
+    <!-- ========== OBJECT PROPERTIES (Relations) ========== -->
+    
+    <!-- Relations Touriste -->
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#choisit">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#logerDans">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#seDeplacePar">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#participeA">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#aPourProfil">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#ProfilTouriste"/>
+    </owl:ObjectProperty>
+    
+    <!-- Relations spécifiques -->
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#certifiePar">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#CertificationEco"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#associeA">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#appliquePar">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Durabilite"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#aPourImpact">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#ImpactEnvironnemental"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#propose">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Recommandation"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#ActiviteTouristique"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#recommandeDestination">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Recommandation"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.example.org/tourisme-eco#recommandeHebergement">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Recommandation"/>
+        <rdfs:range rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+    </owl:ObjectProperty>
+    
+    <!-- ========== DATA PROPERTIES (Attributs) ========== -->
+    
+    <!-- Attributs Touriste -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#nom">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#age">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#budget">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#preferenceEco">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Touriste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+    <!-- Attributs ProfilTouriste -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#habitudesVoyage">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#ProfilTouriste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#preferencesEnvironnementales">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#ProfilTouriste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <!-- Attributs Destination -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#nomDestination">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#region">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#accessibilite">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <!-- Attributs Hébergement -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#capacite">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#cout">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#labelEcologique">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <!-- Attributs Transport -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#empreinteCarbone">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#coutTransport">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#duree">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+    <!-- Attributs ImpactEnvironnemental -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#consommationEau">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#ImpactEnvironnemental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#dechetsGeneres">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#ImpactEnvironnemental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+    <!-- Attributs CertificationEco -->
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#nomLabel">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#CertificationEco"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#organisme">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#CertificationEco"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.example.org/tourisme-eco#dateObtention">
+        <rdfs:domain rdf:resource="http://www.example.org/tourisme-eco#CertificationEco"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>
